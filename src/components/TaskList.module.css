@@ -1,0 +1,30 @@
+.taskList{
+  margin: 0 auto;
+  max-width: 736px;
+}
+
+.taskList > header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.taskList header > strong{
+ color: var(--blue-dark);
+ font-size: 0.875rem;
+}
+.taskList header > strong + strong{
+  color: var(--purple-dark);
+  font-size: 0.875rem;
+}
+
+.taskList span{
+  margin: 0.5rem;
+  padding: 2px 8px;
+
+  background-color: var(--gray-400);
+  border-radius: 999px;
+  color: var(--gray-200);
+
+  font-size: 0.75rem;
+}

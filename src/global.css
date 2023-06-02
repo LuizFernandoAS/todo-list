@@ -22,7 +22,7 @@
   box-sizing: border-box;
 }
 
-body, button, textarea, span{
+body, button, textarea, span, input{
   font-family: 'Inter', sans-serif; 
   color: var(--gray-100);
 }

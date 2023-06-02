@@ -1,22 +1,19 @@
-import styles from './Task.module.css'
-import { Trash } from '@phosphor-icons/react';
+import { Trash, Check } from "@phosphor-icons/react";
+import styles from "./Task.module.css";
 
+interface checkedProps{
+  checked: boolean;
+}
 
-export function Task(){
+export function Task({checked}:checkedProps){
   return(
-    <div>
-        <header>
-          <strong>Tarefas criadas<span>0</span></strong>
-          <strong>Concluídas<span>0</span></strong>
-        </header>
+    <div className={styles.task}>
+      <button className={checked? styles.checkListChecked:styles.checkListEmpty}>
+        <Check size={10} weight="bold"/>
+      </button>
 
-        <main>
-          <div>
-            <button></button>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eligendi laboriosam saepe placeat illum, officia magnam unde repellat assumenda nobis dolore eos ratione animi culpa dolor possimus odit! Dicta, necessitatibus.</p>
-            <button><Trash/> </button>
-          </div>
-        </main>
-      </div>
+      <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
+      <button><Trash/></button>
+    </div>
   )
 }
